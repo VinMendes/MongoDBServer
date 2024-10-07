@@ -1,7 +1,5 @@
 package mongodbServer;
 
-import cripto.Criptografia;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -16,38 +14,55 @@ public class ServerMongo {
         Socket socket = null;
         BufferedReader in;
         BufferedWriter out;
+        BufferedReader console;
         String menReceber = null;
         String menEnviar = null;
 
         try {
             server = new ServerSocket(12345);
-            System.out.println("Servidor esta rodando na porta 12345");
-            System.out.println("Aguardando conecao");
+            System.out.println("Servidor está rodando na porta 12345");
+            System.out.println("Aguardando conexão");
             socket = server.accept();
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            System.out.println("Conecao realizada com " + socket.getInetAddress());
-            while(true) {
+            console = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Conexão realizada com " + socket.getInetAddress());
+
+            while (true) {
                 System.out.println("Aguardando mensagem do cliente: " + socket.getInetAddress());
                 menReceber = in.readLine();
-                menReceber = Criptografia.criptografar(menReceber);
-                MongoDB.insertDocument(menReceber);
+
+                // Criar JSON válido para a mensagem recebida
+                String jsonRecebida = "{ \"mensagemRecebida\": \"" + menReceber.replace("\"", "\\\"") + "\" }";
+                MongoDB.insertDocument(jsonRecebida);
+
+                // Descriptografar a mensagem recebida
+                menReceber = Criptografia.descriptografar(menReceber);
                 System.out.println("Mensagem do cliente: " + menReceber);
-                System.out.println("Resposta: ");
-                menEnviar = Teclado.getString();
+
+                System.out.print("Resposta: ");
+                menEnviar = console.readLine();
+
+                // Criptografar a mensagem a ser enviada
                 menEnviar = Criptografia.criptografar(menEnviar);
                 out.write(menEnviar);
                 out.newLine();
                 out.flush();
-                MongoDB.insertDocument(menEnviar);
+
+                // Criar JSON válido para a mensagem enviada
+                String jsonEnviada = "{ \"mensagemEnviada\": \"" + menEnviar.replace("\"", "\\\"") + "\" }";
+                MongoDB.insertDocument(jsonEnviada);
             }
-        }catch (Exception e) {
-            System.err.println(e.getMessage());;
-        }finally {
+        } catch (Exception e) {
+            System.err.println("Erro: " + e.getMessage());
+            e.printStackTrace();
+        } finally {
             try {
-                if(server != null) { server.close();}
-            }catch (Exception e) {
-                System.err.println("Error para fechar servidor");
+                if (server != null) {
+                    server.close();
+                }
+            } catch (Exception e) {
+                System.err.println("Erro ao fechar servidor");
             }
         }
     }
