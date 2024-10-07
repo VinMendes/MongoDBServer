@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd506e0a-8c38-4cd6-b902-6da13e180d08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/bson-5.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/bson-record-codec-5.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/mongodb-driver-core-5.2.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/mongodb-driver-sync-5.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/bcprov-jdk15on-1.70.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mongodbServer/AESCrypto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDBServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDBServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mongodbServer/ClientMongo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongodbServer/ClientMongo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,10 +38,11 @@
   "keyToString": {
     "Application.ClientMongo.executor": "Run",
     "Application.ServerMongo.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/viniciusmendes/IdeaProjects/mongoDBServer/libs",
+    "last_opened_file_path": "C:/Users/tiagu/OneDrive/Área de Trabalho/Nova pasta (2)/Nova pasta/MongoDBServer/libs/bcprov-jdk15on-1.70.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -58,6 +56,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tiagu\OneDrive\Área de Trabalho\Nova pasta (2)\Nova pasta\MongoDBServer\libs" />
       <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
@@ -68,8 +67,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
       </set>
     </attachedChunks>
   </component>
@@ -84,6 +82,7 @@
       <workItem from="1728302555588" duration="722000" />
       <workItem from="1728303303526" duration="1925000" />
       <workItem from="1728307470588" duration="601000" />
+      <workItem from="1728309435825" duration="705000" />
     </task>
     <servers />
   </component>
