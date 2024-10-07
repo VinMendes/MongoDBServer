@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd506e0a-8c38-4cd6-b902-6da13e180d08" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/mongodbServer/Criptografia.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/bson-5.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/bson-record-codec-5.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mongodb-driver-core-5.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mongodb-driver-sync-5.2.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDBServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDBServer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mongodbServer/ClientMongo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongodbServer/ClientMongo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mongodbServer/ServerMongo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongodbServer/ServerMongo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,20 +44,21 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/viniciusmendes/IdeaProjects/mongoDBServer/src",
+    "last_opened_file_path": "/Users/viniciusmendes/IdeaProjects/mongoDBServer/libs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -79,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1728302554545</updated>
       <workItem from="1728302555588" duration="722000" />
-      <workItem from="1728303303526" duration="1387000" />
+      <workItem from="1728303303526" duration="1925000" />
+      <workItem from="1728307470588" duration="601000" />
     </task>
     <servers />
   </component>

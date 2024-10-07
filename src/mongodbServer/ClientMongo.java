@@ -15,7 +15,7 @@ public class ClientMongo {
 
         try {
             // Conectando ao servidor
-            socket = new Socket(" 192.168.156.170", 12345);
+            socket = new Socket("192.168.156.118", 12345);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             console = new BufferedReader(new InputStreamReader(System.in));
