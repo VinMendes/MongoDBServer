@@ -11,21 +11,21 @@ public class ClientMongo {
         Socket socket = null;
         BufferedReader in;
         BufferedWriter out;
-        BufferedReader console;
+        String ax;
 
         try {
             // Conectando ao servidor
-            socket = new Socket("192.168.156.118", 12345);
+            socket = new Socket("192.168.156.170", 12345);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            console = new BufferedReader(new InputStreamReader(System.in));
 
             System.out.println("Conectado ao servidor.");
 
             // Loop para envio e recebimento de mensagens
             while (true) {
                 System.out.print("Digite a mensagem para o servidor: ");
-                String mensagemEnviar = console.readLine();
+                String mensagemEnviar = Teclado.getString();
+                ax = mensagemEnviar;
 
                 // Criptografando a mensagem antes de enviar
                 mensagemEnviar = Criptografia.criptografar(mensagemEnviar);
@@ -35,6 +35,12 @@ public class ClientMongo {
                 out.newLine();
                 out.flush();
 
+                // Condição para encerrar
+                if(ax.equals("Bye")) {
+                    System.out.println("Conexao encerrada pelo cliente");
+                    break;
+                }
+
                 // Recebendo a resposta do servidor
                 String resposta = in.readLine();
                 if (resposta != null) {
@@ -43,14 +49,13 @@ public class ClientMongo {
                 }
 
                 // Condição para encerrar
-                if (mensagemEnviar.equals("Bye")) {
+                if (resposta.equals("Bye")) {
                     System.out.println("Encerrando conexão...");
                     break;
                 }
             }
         } catch (Exception e) {
             System.err.println("Erro na conexão com o servidor: " + e.getMessage());
-            e.printStackTrace();
         } finally {
             try {
                 if (socket != null) socket.close();

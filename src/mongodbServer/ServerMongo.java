@@ -14,9 +14,9 @@ public class ServerMongo {
         Socket socket = null;
         BufferedReader in;
         BufferedWriter out;
-        BufferedReader console;
         String menReceber = null;
         String menEnviar = null;
+        String ax = null;
 
         try {
             server = new ServerSocket(12345);
@@ -25,7 +25,6 @@ public class ServerMongo {
             socket = server.accept();
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
-            console = new BufferedReader(new InputStreamReader(System.in));
             System.out.println("Conexão realizada com " + socket.getInetAddress());
 
             while (true) {
@@ -40,8 +39,15 @@ public class ServerMongo {
                 menReceber = Criptografia.descriptografar(menReceber);
                 System.out.println("Mensagem do cliente: " + menReceber);
 
+                // Condição para encerrar
+                if(menReceber.equals("Bye")) {
+                    System.out.println("Conexao encerrada pelo cliente");
+                    break;
+                }
+
                 System.out.print("Resposta: ");
-                menEnviar = console.readLine();
+                menEnviar = Teclado.getString();
+                ax = menEnviar;
 
                 // Criptografar a mensagem a ser enviada
                 menEnviar = Criptografia.criptografar(menEnviar);
@@ -52,10 +58,15 @@ public class ServerMongo {
                 // Criar JSON válido para a mensagem enviada
                 String jsonEnviada = "{ \"mensagemEnviada\": \"" + menEnviar.replace("\"", "\\\"") + "\" }";
                 MongoDB.insertDocument(jsonEnviada);
+
+                // Condição para encerrar
+                if(ax.equals("Bye")) {
+                    System.out.println("Conexao encerrada pelo servidor");
+                    break;
+                }
             }
         } catch (Exception e) {
             System.err.println("Erro: " + e.getMessage());
-            e.printStackTrace();
         } finally {
             try {
                 if (server != null) {
