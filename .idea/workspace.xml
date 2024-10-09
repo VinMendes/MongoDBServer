@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd506e0a-8c38-4cd6-b902-6da13e180d08" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mongodbServer/ClientMongo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongodbServer/ClientMongo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mongodbServer/MongoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongodbServer/MongoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mongodbServer/ServerMongo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/mongodbServer/ServerMongo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +59,10 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.notifications&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -98,6 +98,10 @@
       <workItem from="1728309435825" duration="705000" />
       <workItem from="1728353335404" duration="1077000" />
       <workItem from="1728394679704" duration="1377000" />
+      <workItem from="1728470383266" duration="652000" />
+      <workItem from="1728471734010" duration="606000" />
+      <workItem from="1728473960947" duration="1449000" />
+      <workItem from="1728475458719" duration="651000" />
     </task>
     <servers />
   </component>

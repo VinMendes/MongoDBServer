@@ -15,7 +15,7 @@ public class ClientMongo {
 
         try {
             // Conectando ao servidor
-            socket = new Socket("192.168.156.170", 12345);
+            socket = new Socket("192.168.69.96", 12345);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             out = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 
@@ -28,7 +28,7 @@ public class ClientMongo {
                 ax = mensagemEnviar;
 
                 // Criptografando a mensagem antes de enviar
-                mensagemEnviar = Criptografia.criptografar(mensagemEnviar);
+                mensagemEnviar = AESCrypto.encrypt(mensagemEnviar, "SixteenByteKey!!");
 
                 // Enviando a mensagem para o servidor
                 out.write(mensagemEnviar);
@@ -44,7 +44,7 @@ public class ClientMongo {
                 // Recebendo a resposta do servidor
                 String resposta = in.readLine();
                 if (resposta != null) {
-                    resposta = Criptografia.descriptografar(resposta);
+                    resposta = AESCrypto.decrypt(resposta, "SixteenByteKey!!");
                     System.out.println("Resposta do servidor: " + resposta);
                 }
 

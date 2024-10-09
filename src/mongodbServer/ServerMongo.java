@@ -36,7 +36,7 @@ public class ServerMongo {
                 MongoDB.insertDocument(jsonRecebida);
 
                 // Descriptografar a mensagem recebida
-                menReceber = Criptografia.descriptografar(menReceber);
+                menReceber = AESCrypto.decrypt(menReceber, "SixteenByteKey!!");
                 System.out.println("Mensagem do cliente: " + menReceber);
 
                 // Condição para encerrar
@@ -50,7 +50,7 @@ public class ServerMongo {
                 ax = menEnviar;
 
                 // Criptografar a mensagem a ser enviada
-                menEnviar = Criptografia.criptografar(menEnviar);
+                menEnviar = AESCrypto.encrypt(menEnviar, "SixteenByteKey!!");
                 out.write(menEnviar);
                 out.newLine();
                 out.flush();
