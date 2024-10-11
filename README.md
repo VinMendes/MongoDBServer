@@ -1,6 +1,6 @@
 # MongoDB Server e Client usando Criptografia
 
-Nosso projeto funciona através de um cliente e um servidor que utilizam sockets para comunicar. Foi implementado Criptografia nas mensagens, que são armazenadas desta forma no nosso bando de dados MongoDB.
+Nosso projeto funciona através de um cliente e um servidor que utilizam sockets para comunicar. Foi implementado Criptografia nas mensagens, que são armazenadas desta forma no nosso banco de dados MongoDB.
 
 ## Estrutura do Projeto
 
